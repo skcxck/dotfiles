@@ -1,0 +1,25 @@
+#! /bin/sh
+
+# Fixes java applications
+wmname compiz
+
+sxhkd &
+~/.fehbg
+setxkbmap de &
+flameshot &
+picom -b &
+sh ~/.config/polybar/launch.sh
+
+bspc monitor -d HOME CODE CHAT MUSIC WEB       
+
+bspc config border_width         0
+bspc config window_gap          40
+
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a alacritty desktop='HOME'
+bspc rule -a PhpStorm desktop='CODE'
+bspc rule -a spotify desktop='MUSIC'
+bspc rule -a chromium desktop='WEB'
